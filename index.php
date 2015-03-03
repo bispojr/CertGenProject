@@ -52,8 +52,9 @@ and open the template in the editor.
             require_once './app/model/db/Connection.php';
             require_once './app/model/Registered.php';
 
-            $conn = new Connection('localhost', 'root', 'root', 'certificados_db');
-
+            //$conn = new Connection('localhost', 'root', 'root', 'certificados_db');
+            $conn = new Connection('https://certificados-evppgajataiufg.rhcloud.com/', 'pedro', '123', 'certificados_db');
+            
             $conn->connect();
 
             if (filter_input(INPUT_POST, 'inscrito')) {
